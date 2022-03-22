@@ -132,7 +132,7 @@ SSH into the control node and follow the steps below:
   
 - Filebeat-config.yml:
   
-  - Line 1106
+  - Line 1106:
   
 ![filebeat-config.yml](screenshots/filebeat-config.png)  
 
