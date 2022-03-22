@@ -79,10 +79,14 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- Installs the following modules within the container: docker.io, pip3, install docker python module. 
-![A89B034F-1170-4119-9473-0CE673B31E88](https://user-images.githubusercontent.com/65835286/159406269-ce45f240-3280-4078-ad3c-21f7f20d1c16.jpeg)
-- Configures sysctl modules, increases system memory, downloads and launches a docker ELK container.
-- Launches the container using the published ports 5601:5601, 9200:9200, and 5044:5044
+- Configures the Elk VM with Docker.
+![elk_playbook](https://user-images.githubusercontent.com/65835286/159406960-02ec60d4-001b-4387-9232-ff8e5b8b6bf6.png)
+- Installs the following modules within the container: docker.io, pip3, and docker python module. 
+![elk_playbook1](https://user-images.githubusercontent.com/65835286/159407026-73f94458-2944-4507-a4df-d3b21c8f4bbd.png)
+- Configures sysctl modules, increases system memory, downloads and launches a docker ELK container using the published ports 5601:5601, 9200:9200, and 5044:5044.
+![elk_playbook2](https://user-images.githubusercontent.com/65835286/159406752-332e4a2b-1964-4057-b905-1af45b66d85c.png)
+- Configures the Docker to start automatically on boot.  
+![elk_playbook3](https://user-images.githubusercontent.com/65835286/159407441-5e6b958c-8d18-48c4-ae98-fbafee243f80.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
