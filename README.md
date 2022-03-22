@@ -66,11 +66,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       	| Publicly Accessable | Allowed IP Addresses     |
 |-------------|---------------------|--------------------------|
-| Jump Box   	| Yes                 | SSH from whitelisted IP  |
-| Web-1      	| No                  |                          |
-| Web-2      	| No                  |                          |
-| Web-3      	| No                  |                          |
-| ELK Server 	| Yes                 | SSH from whitelisted IP  |
+| Jump Box   	| Yes                 | 193.56.117.137           |
+| Web-1      	| No                  | 10.1.0.4                 |
+| Web-2      	| No                  | 10.1.0.4                 |
+| Web-3      	| No                  | 10.1.0.4                 |    
+| ELK Server 	| Yes                 | 193.56.117.137:5601      |
 
 
 ### Elk Configuration
