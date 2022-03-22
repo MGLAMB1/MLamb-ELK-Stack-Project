@@ -2,19 +2,23 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![ELK Stack Diagram](diagrams/elk_stack_diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  -Playbook Files:
-  elk-playbook.yml
-  Ansible Hosts
-  filebeat-config.yml
-  filebeat-playbook.yml
-  metricbeat-config.yml
-  metricbeat-playbook.yml
+![elk_playbook.yml](ansible/elk_playbook.yml)
 
-This document contains the following details:
+![Hosts](ansible/hosts)
+
+![filebeat-config.yml](ansible/filebeat-config.yml)
+
+![filebeat-playbook.yml](ansible/filebeat-playbook.yml)
+
+![metricbeat-config.yml](ansible/metricbeat-config.yml)
+
+![metricbeat-playbook.yml](ansible/metricbeat-playbook.yml)
+
+These documents contain the following details:
 - Description of the Topology
 - Access Policies
 - ELK Configuration
@@ -30,7 +34,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
 - Load balancers defend an organization against Digital Denial of Service (DDoS) attacks by helping servers move data efficiently, optimizing the use of application delivery resources, and preventing server overloads by spreading the load evenly between multiple servers.
--The advantage of a jump box is that it provides a single point of entry and exit within the network, securing and configuring the internal network from the external network.  
+- The advantage of a jump box is that it provides a single point of entry and exit within the network, securing and configuring the internal network from the external network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system configuration.
 
@@ -42,11 +46,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name       	| Function                  | IP Address 	| Operating System     		
 |-------------|---------------------------|-------------|----------------------		
-| Jump Box   	| gateway                   | 10.1.0.4   	| Linux (Ubuntu 18.04)  	
-| Web-1      	| Traffic Monitoring        | 10.1.0.5   	| Linux (Ubuntu 18.04) 		
-| Web-2      	| Traffic Monitoring        | 10.1.0.6   	| Linux (Ubuntu 18.04) 		
-| Web-3      	| Traffic Monitoring        | 10.1.0.7   	| Linux (Ubuntu 18.04) 		
-| ELK Server 	| Data Analytics Aggregation| 10.0.0.4   	| Linux (Ubuntu 18.04) 
+| Jump Box   	| Gateway                   | 10.1.0.4, 20.25.4.16  | Linux (Ubuntu 18.04)  	
+| Web-1      	| Traffic Monitoring        | 10.1.0.5   	          | Linux (Ubuntu 18.04) 		
+| Web-2      	| Traffic Monitoring        | 10.1.0.6            	| Linux (Ubuntu 18.04) 		
+| Web-3      	| Traffic Monitoring        | 10.1.0.7   	          | Linux (Ubuntu 18.04) 		
+| ELK Server 	| Data Analytics Aggregation| 10.0.0.4, 137.117.11.6| Linux (Ubuntu 18.04) 
 
 
 ### Access Policies
@@ -54,7 +58,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- 193.56.117.137
 
 Machines within the network can only be accessed by the Jump box provisioner with the corresponding ansible container at IP address 10.1.0.4.
 
@@ -62,11 +66,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       	| Publicly Accessable | Allowed IP Addresses     |
 |-------------|---------------------|--------------------------|
-| Jump Box   	| Yes                 | SSH from whitelisted IP  |
-| Web-1      	| No                  |                          |
-| Web-2      	| No                  |                          |
-| Web-3      	| No                  |                          |
-| ELK Server 	| Yes                 | SSH from whitelisted IP  |
+| Jump Box   	| Yes                 | 193.56.117.137           |
+| Web-1      	| No                  | 10.1.0.4                 |
+| Web-2      	| No                  | 10.1.0.4                 |
+| Web-3      	| No                  | 10.1.0.4                 |    
+| ELK Server 	| Yes                 | 193.56.117.137:5601      |
 
 
 ### Elk Configuration
@@ -75,12 +79,20 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- installs the following modules within the container: docker.io, pip3, install docker python module. 
-- Configures sysctl modules, increases system memory, downloads and launches a docker ELK container.
-- Launches the container using the published ports 5601:5601, 9200:9200, and 5044:5044
+- Configures the Elk VM with Docker.
+![elk_playbook](https://user-images.githubusercontent.com/65835286/159406960-02ec60d4-001b-4387-9232-ff8e5b8b6bf6.png)
+- Installs the following modules within the container: docker.io, pip3, and docker python module. 
+![elk_playbook1](https://user-images.githubusercontent.com/65835286/159407026-73f94458-2944-4507-a4df-d3b21c8f4bbd.png)
+- Configures sysctl modules, increases system memory, downloads and launches a docker ELK container using the published ports 5601:5601, 9200:9200, and 5044:5044.
+![elk_playbook2](https://user-images.githubusercontent.com/65835286/159406752-332e4a2b-1964-4057-b905-1af45b66d85c.png)
+- Configures the Docker to start automatically on boot.  
+![elk_playbook3](https://user-images.githubusercontent.com/65835286/159407441-5e6b958c-8d18-48c4-ae98-fbafee243f80.png)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
 ### Target Machines & Beats
