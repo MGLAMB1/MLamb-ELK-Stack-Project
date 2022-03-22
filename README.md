@@ -90,8 +90,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![ELK-Server docker ps](screenshots/docker_ps/ELK-Server_docker_ps.png)
+![Web-1 docker ps](screenshots/docker_ps/Web-1_docker_ps.png)
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
