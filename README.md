@@ -147,5 +147,8 @@ SSH into the control node and follow the steps below:
     [elk]
     10.0.0.4 ansible_python_interpreter=/usr/bin/python3
 
+ - Once all of the configurations have been set, run the following commands from the ansible container:
+   - ansible-playbook filebeat-playbook.yml
+   - ansible-playbook metricbeat-playbook.yml
+  
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
