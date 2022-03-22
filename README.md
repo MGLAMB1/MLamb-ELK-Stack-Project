@@ -46,11 +46,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name       	| Function                  | IP Address 	| Operating System     		
 |-------------|---------------------------|-------------|----------------------		
-| Jump Box   	| gateway                   | 10.1.0.4   	| Linux (Ubuntu 18.04)  	
-| Web-1      	| Traffic Monitoring        | 10.1.0.5   	| Linux (Ubuntu 18.04) 		
-| Web-2      	| Traffic Monitoring        | 10.1.0.6   	| Linux (Ubuntu 18.04) 		
-| Web-3      	| Traffic Monitoring        | 10.1.0.7   	| Linux (Ubuntu 18.04) 		
-| ELK Server 	| Data Analytics Aggregation| 10.0.0.4   	| Linux (Ubuntu 18.04) 
+| Jump Box   	| gateway                   | 10.1.0.4, 20.25.4.16  | Linux (Ubuntu 18.04)  	
+| Web-1      	| Traffic Monitoring        | 10.1.0.5   	          | Linux (Ubuntu 18.04) 		
+| Web-2      	| Traffic Monitoring        | 10.1.0.6            	| Linux (Ubuntu 18.04) 		
+| Web-3      	| Traffic Monitoring        | 10.1.0.7   	          | Linux (Ubuntu 18.04) 		
+| ELK Server 	| Data Analytics Aggregation| 10.0.0.4, 137.117.11.6| Linux (Ubuntu 18.04) 
 
 
 ### Access Policies
