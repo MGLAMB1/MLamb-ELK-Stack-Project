@@ -130,17 +130,17 @@ SSH into the control node and follow the steps below:
 
 - You will need to update filebeat-config.yml and metricbeat-config.yml, adding the ELK private IP address of 10.0.0.4 so that the kibana monitor modules are deployed properly on the ELK server.
   
-- Filebeat-config.yml:
+   - Filebeat-config.yml:
   
-  - Line 1106:
+      - Line 1106:
   
-![filebeat-config.yml](screenshots/filebeat-config.png)  
+  ![filebeat-config.yml](screenshots/filebeat-config.png)  
 
-  - Line 1806:
+      - Line 1806:
   
-![filebeat-config.yml](screenshots/filebeat-config1.png)
+  ![filebeat-config.yml](screenshots/filebeat-config1.png)
   
-- Metricbeat-config.yml: 
+  - Metricbeat-config.yml: 
   
   ![metricbeat-congif.yml](screenshots/metricbeat-config.png)
   
