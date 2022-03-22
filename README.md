@@ -140,18 +140,8 @@ SSH into the control node and follow the steps below:
 
 -  You will also need to update the hosts file on the ansible container to show proper targets for deployment and monitoring for the ELK server.
     
-    [webservers]
-    
-    10.1.0.5 ansible_python_interpreter=/usr/bin/python3
-     
-    10.1.0.6 ansible_python_interpreter=/usr/bin/python3
-    
-    10.1.0.7 ansible_python_interpreter=/usr/bin/python3
-
-    [elk]
-    
-    10.0.0.4 ansible_python_interpreter=/usr/bin/python3
-
+![Hosts](screenshots/hosts.png)
+  
  - Once all of the configurations have been set, run the following commands from the ansible container:
    - ansible-playbook filebeat-playbook.yml
    - ansible-playbook metricbeat-playbook.yml
