@@ -132,9 +132,9 @@ SSH into the control node and follow the steps below:
   
    - Filebeat-config.yml:
   
-  ![filebeat-config.yml](screenshots/filebeat-config.png)  
+![filebeat-config.yml](screenshots/filebeat-config.png)  
   
-  ![filebeat-config.yml](screenshots/filebeat-config1.png)
+![filebeat-config.yml](screenshots/filebeat-config1.png)
   
   - Metricbeat-config.yml: 
   
