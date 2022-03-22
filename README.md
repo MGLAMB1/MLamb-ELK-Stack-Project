@@ -58,7 +58,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- 193.56.117.137
 
 Machines within the network can only be accessed by the Jump box provisioner with the corresponding ansible container at IP address 10.1.0.4.
 
@@ -79,7 +79,8 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- installs the following modules within the container: docker.io, pip3, install docker python module. 
+- Installs the following modules within the container: docker.io, pip3, install docker python module. 
+![A89B034F-1170-4119-9473-0CE673B31E88](https://user-images.githubusercontent.com/65835286/159406269-ce45f240-3280-4078-ad3c-21f7f20d1c16.jpeg)
 - Configures sysctl modules, increases system memory, downloads and launches a docker ELK container.
 - Launches the container using the published ports 5601:5601, 9200:9200, and 5044:5044
 
