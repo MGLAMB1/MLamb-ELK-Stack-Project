@@ -92,10 +92,13 @@ The following screenshot displays the result of running `docker ps` after succes
 
 -ELK_Server:
 ![ELK-Server docker ps](screenshots/docker_ps/ELK-Server_docker_ps.png)
+
 Web-1:
 ![Web-1 docker ps](screenshots/docker_ps/Web-1_docker_ps.png)
+
 -Web-2:
 ![Web-2 docker ps](screenshots/docker_ps/Web-2_docker_ps.png)
+
 -Web-3:
 ![Web-3 docker ps](screenshots/docker_ps/Web-3_docker_ps.png)
 
