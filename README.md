@@ -34,7 +34,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
 - Load balancers defend an organization against Digital Denial of Service (DDoS) attacks by helping servers move data efficiently, optimizing the use of application delivery resources, and preventing server overloads by spreading the load evenly between multiple servers.
--The advantage of a jump box is that it provides a single point of entry and exit within the network, securing and configuring the internal network from the external network.  
+- The advantage of a jump box is that it provides a single point of entry and exit within the network, securing and configuring the internal network from the external network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system configuration.
 
