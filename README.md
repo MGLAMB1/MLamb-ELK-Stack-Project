@@ -112,16 +112,33 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat collects log events and forwards them to either Elasticsearch or Logstash.Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server.
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+In order to use the playbooks, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat configuration and metricbeat config file to the ansible container.
+- Update the configuration files to include the correct IP address of the ELK Server @ 10.0.0.4:5601 and 10.0.0.4:9200
+- Run the filebeat and metricbeat playbooks, and navigate to the proper URL of the ELK Server GUI (Kibana: http://<public-ELK-IP-address>:5601/app/kibana) to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- The two playbook files you will need to be concerned with are filebeat-playbook.yml and metricbeat-playbook.yml. Both will need to be copied to the /etc/ansible/roles directory within your ansible container.
+
+- You will need to update filebeat-config.yml and metricbeat-config.yml, specifically on line 1106 and 1806, adding the ELK private IP address of 10.0.0.4 so that the kibana monitor modules are deployed properly on the ELK server.
+   - Line 1106- update the hosts IP address to your ELK server’s private IP address:
+          hosts: ["10.0.0.4:9200"]
+          username: "elastic"
+          password: "changeme" 
+  
+   - Line 1806- perform the same action as above:
+   setup.kibana:
+          host: "10.0.0.4:5601" 
+
+-  You will also need to update the hosts file on the ansible container to show proper targets for deployment and monitoring for the ELK server.
+    [webservers]
+    10.1.0.5 ansible_python_interpreter=/usr/bin/python3
+    10.1.0.6 ansible_python_interpreter=/usr/bin/python3
+    10.1.0.7 ansible_python_interpreter=/usr/bin/python3
+
+    [elk]
+    10.0.0.4 ansible_python_interpreter=/usr/bin/python3
+
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
