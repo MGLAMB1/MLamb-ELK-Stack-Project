@@ -128,7 +128,7 @@ SSH into the control node and follow the steps below:
 
 - The two playbook files you will need to be concerned with are filebeat-playbook.yml and metricbeat-playbook.yml. Both will need to be copied to the /etc/ansible/roles directory within your ansible container.
 
-- You will need to update filebeat-config.yml and metricbeat-config.yml, specifically on line 1106 and 1806, adding the ELK private IP address of 10.0.0.4 so that the kibana monitor modules are deployed properly on the ELK server.
+- You will need to update filebeat-config.yml and metricbeat-config.yml, specifically on lines 1106 and 1806, adding the ELK private IP address of 10.0.0.4 so that the kibana monitor modules are deployed properly on the ELK server.
    - Line 1106- update the hosts IP address to your ELK server’s private IP address:
           hosts: ["10.0.0.4:9200"]
           username: "elastic"
