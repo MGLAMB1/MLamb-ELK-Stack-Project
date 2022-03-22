@@ -90,10 +90,14 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
+-ELK_Server:
 ![ELK-Server docker ps](screenshots/docker_ps/ELK-Server_docker_ps.png)
+Web-1:
 ![Web-1 docker ps](screenshots/docker_ps/Web-1_docker_ps.png)
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+-Web-2:
+![Web-2 docker ps](screenshots/docker_ps/Web-2_docker_ps.png)
+-Web-3:
+![Web-3 docker ps](screenshots/docker_ps/Web-3_docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
