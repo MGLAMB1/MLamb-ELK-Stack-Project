@@ -144,7 +144,7 @@ SSH into the control node and follow the steps below:
     
 ![Hosts](screenshots/hosts.png)
   
- - Once all of the configurations have been set, run the following commands from the ansible container:
+ - Once all of the configurations have been set, run the following commands from the ansible container to begin the process of downloading and running the prescribed programs:
    - ansible-playbook filebeat-playbook.yml
    - ansible-playbook metricbeat-playbook.yml
   
