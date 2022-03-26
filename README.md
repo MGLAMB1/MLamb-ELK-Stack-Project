@@ -122,7 +122,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbooks, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat configuration and metricbeat config file to the ansible container.
+- Copy the filebeat configuration and metricbeat configuration files to the ansible container.
 - Update the configuration files to include the correct IP address of the ELK Server @ 10.0.0.4:5601 and 10.0.0.4:9200
 - Run the filebeat and metricbeat playbooks, and navigate to the proper URL of the ELK Server GUI (Kibana: http://<public-ELK-IP-address>:5601/app/kibana) to check that the installation worked as expected.
 
