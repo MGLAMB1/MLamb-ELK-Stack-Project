@@ -64,7 +64,7 @@ Machines within the network can only be accessed by the Jump box provisioner wit
 
 A summary of the access policies in place can be found in the table below.
 
-| Name       	| Publicly Accessable | Allowed IP Addresses     |
+| Name       	| Publicly Accessible | Allowed IP Addresses     |
 |-------------|---------------------|--------------------------|
 | Jump Box   	| Yes                 | 193.56.117.137           |
 | Web-1      	| No                  | 10.1.0.4                 |
